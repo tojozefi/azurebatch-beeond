@@ -1,0 +1,32 @@
+{
+  "id": "",
+  "vmSize": "",
+  "virtualMachineConfiguration": {
+    "imageReference": {
+      "publisher": "",
+      "offer": "",
+      "sku": "",
+	  "virtualMachineImageId": ""
+    },
+    "nodeAgentSKUId": ""
+  },
+  "enableInterNodeCommunication": true,
+  "maxTasksPerNode": 1,
+  "targetDedicatedNodes": 2,
+  "startTask": {
+    "commandLine": "",
+    "resourceFiles": [ 
+      {
+        "autoStorageContainerName": ""
+      }
+	],
+    "userIdentity": {
+        "autoUser": {
+          "scope": "pool",
+          "elevationLevel": "admin"
+        }
+    },	
+    "maxTaskRetryCount": 0,
+    "waitForSuccess": true
+  }
+}

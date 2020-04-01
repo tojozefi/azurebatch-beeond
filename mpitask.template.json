@@ -1,0 +1,30 @@
+{
+	"id":"",
+	"commandLine": "",
+	"resourceFiles": [
+		{
+		  "httpUrl":"",
+		  "filePath":""
+		}
+	],
+	"outputFiles" : [],
+	"multiInstanceSettings":
+	{
+		"commonResourceFiles" :
+		[
+			{
+				"httpUrl":"",
+				"filePath":"coordination.sh"
+			}
+		],
+		"numberOfInstances" : 2,
+		"coordinationCommandLine" : ""
+	},
+	"userIdentity": {
+		"autoUser": {
+			"scope":"pool",
+			"elevationLevel":"nonadmin"
+		}
+	},
+	"applicationPackageReferences":[ ]	
+}
