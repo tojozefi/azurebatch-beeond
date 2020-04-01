@@ -1,12 +1,14 @@
 # Batch pool with scratch BeeOND shared filesystem
-This repo offers scripts to easily deploy an Azure Batch pool with [BeeOND](https://www.beegfs.io/wiki/BeeOND) shared filesystem built on top of pool nodes' local SSD disks, utilizing RDMA InfiniBand for BeeOND internal communication.  
-The second NVME local disk is used for BeeOND filesystem when present (e.g. in HB120rs_v2).
+This repo offers scripts to easily deploy an Azure Batch pool with [BeeOND](https://www.beegfs.io/wiki/BeeOND) shared filesystem. 
+You may find it useful if you need a high-performant shared scratch filesystem for your MPI jobs run on Azure Batch.
+BeeOND filesystem is hosted on pool nodes' local SSD disks and is rebuilt to utilize RDMA InfiniBand for BeeOND internal communication.  
+The second NVME local disk of the VMs is used for BeeOND filesystem whenever present (e.g. in HB120rs_v2).
 
 **Note:** This repo is dedicated for Azure VM SKUs with IB SR-IOV, currently: Standard_HB60rs, Standard_HC44rs and Standard_HB120rs_v2.
 
 **Note2:** Credits are due to [HPC-azbatch](https://github.com/az-cat/HPC-azbatch) and [azurehpc/beeond](https://github.com/Azure/azurehpc/tree/master/examples/beeond) projects for inspiration and ideas ;-)
 
-## Prerequisites
+## Prequisites
 1. Azure [subscription](https://azure.microsoft.com/en-us/) 
 1. Azure [Batch account](https://azure.microsoft.com/en-us/services/batch/) and a [blob storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account linked to it. 
 2. Core quota for the VM SKUs that you want to use in chosen region, either in your Batch account or in your Azure subscription (for [user subscription allocation mode](https://docs.microsoft.com/en-us/azure/batch/batch-account-create-portal#additional-configuration-for-user-subscription-mode)).
@@ -25,7 +27,7 @@ The second NVME local disk is used for BeeOND filesystem when present (e.g. in H
     ./00-login.sh params.tpl
 3. Create the Azure Batch pool
     ./01-createpool.sh params.tpl
-4. Create a sample MPI job to test the BeeOND filesystem performance with IOR (optional)
+4. Create a sample MPI job to mount the BeeOND filesystem and test its performance with IOR
     ./02-createjob.sh params.tpl
 ## Monitor your job
 Use [Batch Explorer](https://azure.github.io/BatchExplorer/) to monitor your pools and jobs. 
