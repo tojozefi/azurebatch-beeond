@@ -15,7 +15,7 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 ## Quickstart
 1. Open a [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) (Bash) session from the Azure Portal, or open a Linux session with [Azure CLI v2.0](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and [jq](https://stedolan.github.io/jq) packages installed.
 2. Clone the repository: `git clone https://github.com/tojozefi/azurebatch-beeond.git`
-3. Grant execute access to .sh scripts: `chmod +x *.sh`
+3. Grant execute access to .sh scripts: `cd azurebatch-beeond; chmod +x *.sh`
 ## Procedure
 1. Update the *params.tpl* file with the values specific to your environment:
 * *subscription* : subscription id where your Azure Batch account is created
@@ -24,10 +24,10 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 * *AZURE_BATCH_ACCESS_KEY* : Batch account key (optional)
 * *storage_account_name* : the name of storage account linked with your Batch account
 2. Login to the Azure Batch account  
-    ./00-login.sh params.tpl
+    `./00-login.sh params.tpl`
 3. Create the Azure Batch pool  
-    ./01-createpool.sh params.tpl
+    `./01-createpool.sh params.tpl`
 4. Create a sample MPI job to mount the BeeOND filesystem and test its performance with IOR  
-    ./02-createjob.sh params.tpl
+    `./02-createjob.sh params.tpl`
 ## Monitor your job
 Use [Batch Explorer](https://azure.github.io/BatchExplorer/) to monitor your pools and jobs. 
