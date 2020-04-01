@@ -23,11 +23,11 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 * *AZURE_BATCH_ACCOUNT* : the name of the Batch account
 * *AZURE_BATCH_ACCESS_KEY* : Batch account key (optional)
 * *storage_account_name* : the name of storage account linked with your Batch account
-2. Login to the Azure Batch account
+2. Login to the Azure Batch account  
     ./00-login.sh params.tpl
-3. Create the Azure Batch pool
+3. Create the Azure Batch pool  
     ./01-createpool.sh params.tpl
-4. Create a sample MPI job to mount the BeeOND filesystem and test its performance with IOR
+4. Create a sample MPI job to mount the BeeOND filesystem and test its performance with IOR  
     ./02-createjob.sh params.tpl
 ## Monitor your job
 Use [Batch Explorer](https://azure.github.io/BatchExplorer/) to monitor your pools and jobs. 
