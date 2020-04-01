@@ -23,16 +23,16 @@ module load mpi/openmpi-4.0.3
 module load gcc-9.2.0
 
 echo "*** Throughput test random N-N ***"
-mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -z -B -C -e -F -r -w -t32m -b1G -o $WORKDIR/throughput_random.$(date +"%Y-%m-%d_%H-%M-%S")
+mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -z -B -C -e -F -r -w -t32m -b1G -o $WORKDIR/throughput_random
 sleep 2
 
 echo
 echo "*** Throughput test sequential N-N"
-mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -B -C -e -F -r -w -t32m -b1G -o $WORKDIR/throughput_seq.$(date +"%Y-%m-%d_%H-%M-%S")
+mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -B -C -e -F -r -w -t32m -b1G -o $WORKDIR/throughput_seq
 sleep 2
 
 echo
 echo "*** IOPS test"
-mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -B -C -e -F -r -w -t4k -b128M -o $WORKDIR/iops.$(date +"%Y-%m-%d_%H-%M-%S")
+mpirun -x LD_LIBRARY_PATH -np $NP --hostfile $AZ_BATCH_TASK_WORKING_DIR/hostfile /opt/ior/bin/ior -B -C -e -F -r -w -t4k -b128M -o $WORKDIR/iops
 
 echo "Finished."
