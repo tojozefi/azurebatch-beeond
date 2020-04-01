@@ -1,5 +1,5 @@
 # Batch pool with scratch BeeOND shared filesystem
-This repo offers scripts to easily deploy an Azure Batch pool with [BeeOND](https://www.beegfs.io/wiki/BeeOND) shared filesystem. 
+This repo offers scripts to easily deploy an Azure Batch pool with [BeeOND](https://www.beegfs.io/wiki/BeeOND) shared filesystem.  
 You may find it useful if you need a high-performant shared scratch filesystem for your MPI jobs run on Azure Batch.  
 BeeOND filesystem is hosted on pool nodes' local SSD disks and is rebuilt to utilize RDMA InfiniBand for BeeOND internal communication.  
 The second NVME local disk of the VMs is used for BeeOND filesystem whenever present (e.g. in HB120rs_v2).
