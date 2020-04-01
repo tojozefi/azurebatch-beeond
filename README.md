@@ -6,7 +6,7 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 
 **Note:** This repo is dedicated for Azure VM SKUs with IB SR-IOV, currently: Standard_HB60rs, Standard_HC44rs and Standard_HB120rs_v2.
 
-**Note2:** Credits are due to [HPC-azbatch](https://github.com/az-cat/HPC-azbatch) and [azurehpc/beeond](https://github.com/Azure/azurehpc/tree/master/examples/beeond) projects for inspiration and ideas ;-)
+**Note2:** Credits are due to [HPC-azbatch](https://github.com/az-cat/HPC-azbatch) and [azurehpc/beeond](https://github.com/Azure/azurehpc/tree/master/examples/beeond) projects for inspiration and implementation ideas ;-)
 
 ## Prequisites
 1. Azure [subscription](https://azure.microsoft.com/en-us/) 
