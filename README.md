@@ -27,7 +27,7 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
     `./00-login.sh params.tpl`
 3. Create the Azure Batch pool  
     `./01-createpool.sh params.tpl`
-4. Create a sample MPI job to mount the BeeOND filesystem and test its performance with IOR  
-    `./02-createjob.sh params.tpl`
+4. Run a sample MPI job to mount the BeeOND filesystem and test its performance with IOR  
+    `./02-runjob.sh params.tpl`
 ## Monitor your job
 Use [Batch Explorer](https://azure.github.io/BatchExplorer/) to monitor your pools and jobs. 
