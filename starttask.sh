@@ -51,10 +51,6 @@ chmod 644 /root/.ssh/authorized_keys
 echo "_azbatch ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/azbatch
 echo "Defaults:_azbatch !requiretty" >> /etc/sudoers.d/azbatch
 
-# WRF setup
-mkdir -p /opt/WRF
-tar zxf wrf-gnu.tgz -C /opt/WRF
-
 # IOR setup
 if [ -f ior.tgz ]; then 
 	tar zxf ior.tgz -C /opt
