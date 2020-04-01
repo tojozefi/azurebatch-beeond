@@ -20,7 +20,7 @@ if [ $vm_size != "Standard_HC44rs" ] && [ $vm_size != "Standard_HB60rs" ] && [ $
 fi
 
 starttask_command_line="./$starttask"
-echo $starttask_command_line
+
 jq '.id=$poolId |
     .vmSize=$vmSize |
     .targetDedicatedNodes=$nodeCount |
