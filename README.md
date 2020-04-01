@@ -1,10 +1,12 @@
 # Batch pool with scratch BeeOND shared filesystem
 This repo offers scripts to easily deploy an Azure Batch pool with [BeeOND](https://www.beegfs.io/wiki/BeeOND) shared filesystem built on top of pool nodes' local SSD disks, utilizing RDMA InfiniBand for BeeOND internal communication.  
-The second NVME local disk is used for BeeOND filesystem when present (e.g. in HB120rs_v2).   
-**Note:** This repo is dedicated for Azure VM SKUs with IB SR-IOV, currently: Standard_HB60rs, Standard_HC44rs and Standard_HB120rs_v2.  
+The second NVME local disk is used for BeeOND filesystem when present (e.g. in HB120rs_v2).
+
+**Note:** This repo is dedicated for Azure VM SKUs with IB SR-IOV, currently: Standard_HB60rs, Standard_HC44rs and Standard_HB120rs_v2.
+
 **Note2:** Credits are due to [HPC-azbatch](https://github.com/az-cat/HPC-azbatch) and [azurehpc/beeond](https://github.com/Azure/azurehpc/tree/master/examples/beeond) projects for inspiration and ideas ;-)
 
-## Prequisites
+## Prerequisites
 1. Azure [subscription](https://azure.microsoft.com/en-us/) 
 1. Azure [Batch account](https://azure.microsoft.com/en-us/services/batch/) and a [blob storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account linked to it. 
 2. Core quota for the VM SKUs that you want to use in chosen region, either in your Batch account or in your Azure subscription (for [user subscription allocation mode](https://docs.microsoft.com/en-us/azure/batch/batch-account-create-portal#additional-configuration-for-user-subscription-mode)).
