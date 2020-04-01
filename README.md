@@ -15,7 +15,7 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 ## Quickstart
 1. Open a [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) (Bash) session from the Azure Portal, or open a Linux session with [Azure CLI v2.0](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and [jq](https://stedolan.github.io/jq) packages installed.
 2. Clone the repository: `git clone https://github.com/tojozefi/azurebatch-beeond.git`
-3. Grant execute access to .sh scripts: `cd azurebatch-beeond; chmod +x *.sh`
+3. Grant execute access to .sh scripts: `cd azurebatch-beeond; chmod +x 0*.sh`
 ## Procedure
 1. Update the *params.tpl* file with the values specific to your environment:
 * *subscription* : subscription id where your Azure Batch account is created
