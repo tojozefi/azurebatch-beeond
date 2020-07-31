@@ -14,7 +14,7 @@ The second NVME local disk of the VMs is used for BeeOND filesystem whenever pre
 1. Azure [Batch account](https://azure.microsoft.com/en-us/services/batch/) and a [blob storage](https://azure.microsoft.com/en-us/services/storage/blobs/) account linked to it. 
 2. Core quota for the VM SKUs that you want to use in chosen region, either in your Batch account or in your Azure subscription (for [user subscription allocation mode](https://docs.microsoft.com/en-us/azure/batch/batch-account-create-portal#additional-configuration-for-user-subscription-mode)).
 ## Quickstart
-1. Open a [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) (Bash) session from the Azure Portal, or open a Linux session with [Azure CLI v2.0](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and [jq](https://stedolan.github.io/jq) packages installed.
+1. Open a [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) (Bash) session from the Azure Portal, or open a Linux shell session with [Azure CLI v2.0](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) and [jq](https://stedolan.github.io/jq) packages installed.
 2. Clone the repository: `git clone https://github.com/tojozefi/azurebatch-beeond.git`
 3. Grant execute access to .sh scripts: `cd azurebatch-beeond; chmod +x 0*.sh`
 ## Procedure
